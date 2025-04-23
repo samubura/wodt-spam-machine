@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.1.10"
+    application
 }
 
 group = "it.wldt"
@@ -25,6 +26,11 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:latest.release")
 }
+
+application {
+    mainClass = "it.wldt.MainKt"
+}
+
 
 tasks.test {
     useJUnitPlatform()
